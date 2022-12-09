@@ -1,20 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="/path/to/dist/css/eins-modal.min.css">
     <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="Web site created using create-react-app"
-    />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    <!--
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Signika:wght@500&display=swap" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="node_modules/eins-modal/dist/css/eins-modal.min.css">
+    <link rel="stylesheet" href="style.css"> -->
       manifest.json provides metadata used when your web app is installed on a
       user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
     -->
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <link rel="manifest" href="PUBLIC_URL/manifest.json" />
     <!--
       Notice the use of %PUBLIC_URL% in the tags above.
       It will be replaced with the URL of the `public` folder during the build.
@@ -27,17 +27,284 @@
     <title>React App</title>
   </head>
   <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
+    <header>
+        <div class="navbar container">
+          <nav>
+            <ul>
+              <li><a href="#inicio">INICIO</a></li>
+              <li><a href="#briefcase">PORTAFOLIO</a></li>
+              <li><a href="#about-me">SOBRE MI</a></li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+      <section>
+        
+        <div class="fondo" id="inicio">
+          <div class="container">  
+          <img  src="./img/fondoportafolio1.jpg" alt="fondo" />
+      </div>
+     </div>
+       
+      <div class="perfil">
+        <div class="square"></div>
+        <div class="circle-trans"></div>
+        <div class="circle"></div>
+        <div class="perfil-img"><img src="./img/fotocv.png" alt="" /></div>
+        <div class="square-text">CARMEN AGUILAR IÑIGUEZ</div>
+        <div class="square-text-2">
+          <span>FULL STACK DEVELOPER</span>
+        </div>
+        <div class="contact-icon">
+          <a href="https://github.com/carmencami" target="_blank"
+            ><img src="./img/github-icon.png" alt=""
+          /></a>
+          <a href="https://www.linkedin.com/in/carmencamideveloper" target="_blank"
+            ><img src="./img/linkedin-icon.png" alt=""
+          /></a>
+          <a data-modal-id="message"><img src="./img/logo-mensaje-rem.png" alt="" /></a>
+        </div>
+        <div class="square-text-3"><a href="#about-me"><span> |</span> Sobre Mi |</a></div>
+      </div>
+      </section>
+      <div id="briefcase"></div>
 
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
+<section class="briefcase">
+    <div class="briefcase-section container">
+        <h2> Portafolio</h2>
+        <div class="briefcase-grid">
+            <div><a data-modal-id="pw-caracola"><img src="./img/caracolajoyitas.png"  alt=""></a></div>
+            <div><a data-modal-id="pw-gretaypio"><img src="./img/gretaypio.png" alt=""></a></div>
+            <div><a data-modal-id="pw-kodu"><img src="./img/koduu.png" alt=""></a></div>
+            <div><a data-modal-id="pw-rickymorty"><img src="./img/Rickymorty.png" alt=""></a></div>
+            <div><a data-modal-id="pw-portafolio"  alt=""><img src="./img/web-portafolio.png" alt=""></a></div>
 
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
+        </div>
+    </div>
+</section>
+
+<section class="skills">
+  <div class="skill container"> 
+      <div class="knowledge-part">
+          <h2> Conocimientos</h2>
+          <div class="knowledge">
+              <div>
+                  <img src="./img/html-icon-removebg-preview.png" alt="">
+                  <h3>HTML</h3>
+              </div>
+              <div>
+                  <img src="./img/css-icon-removebg-preview.png" alt="">
+                  <h3>CSS</h3> 
+              </div>
+              <div><img src="./img/js-icon-removebg-preview.png" alt="">
+                  <h3>Javascript</h3>
+              </div>
+              <div><img src="./img/woo-icon-removebg-preview.png" alt="">
+                  <h3>Woo Commerce</h3>
+              </div>
+              <div><img src="./img/seo-removebg-preview.png" alt="">
+                  <h3>Optimización SEO</h3>
+              </div>
+              <div><img src="./img/wordpress-icon-removebg-preview.png" alt="">
+                  <h3>Wordpress</h3>
+              </div>
+              <div><img src="./img/python-logo-removebg-preview.png" alt="">
+                <h3>Python</h3>
+            </div>
+            <div><img src="./img/kisspng-mysql-database-web-development-computer-software-dolphin-5ace280ea31a78.1388980015234601106681-removebg-preview.png" alt="">
+              <h3>MySQL</h3>
+          </div>
+          </div>
+      </div>
+      <div class="tools-part">
+        <h2> Herramientas</h2>
+        <div class="tools">
+            <div>
+                <img src="./img/github-icon.png" alt="">
+                <h3>GitHub</h3>
+            </div>
+            <div>
+                <img src="./img/vsc-icon-removebg-preview.png" alt="">
+                <h3>Visual Studio</h3>
+            </div>
+            <div>
+                <img src="./img/git-icon-removebg-preview.png" alt="">
+                <h3 >GIT</h3>
+            </div>
+            <div>
+                <img src="./img/R-removebg-preview.png" alt="">
+                <h3>Search Console</h3>
+            </div>
+        </div>
+    </div>
+</div>
+</section>
+
+<section class="about" id="about-me">
+  <div class="about-flex container">
+      <div class="about-info">
+          <p>Mi nombre es Carmen Aguilar, Programadora Full Stack Developer con conocimientos de Educación y Psicología. </p>
+          <p><br>Persona con capacidad de ejercer funciones de liderazgo, trabajo en equipo y alto nivel de compromiso. Me gusta la lectura y soy amante del mar. He trabajado en diferentes proyectos web con diversas tecnologías. Me mantengo siempre actualizada ya que me gusta aprender cosas nuevas y superar diferentes retos.</p>
+      </div>
+      <div class="social">
+          <a href="https://github.com/carmencami" target="_blank"><img src="./img/github-icon.png" alt=""></a>
+          <a href="https://www.linkedin.com/in/carmencamideveloper/"target="_blank"><img src="./img/linkedin-icon.png" alt=""></a>
+          <a data-modal-id="message"><img src="./img/logo-mensaje-rem.png" alt=""></a>
+      </div>
+  </div>
+  </section>
+ 
+  <footer>
+    <p>ⓒ 2022 Copyright | Designed by CARMEN AGUILAR</p>
+  </footer>
+   
+  </div>
+</section>
+
+<div id="pw-caracola" class="eins-modal" data-options="openTransition: expandIn; openDuration: 200;">
+  <div class="eins-modal-content">
+      <div class="eins-modal-close"></div>
+          <div class="pw-content">
+              <div class="eins-modal-preview">
+                  <img src="img/caracolajoyitas.png" alt="">
+              </div>
+              <div class="eins-modal-text">
+                  <p>Página web de joyas de plata, Construida con HTML, CSS, WORDPRESS y WOOCOMERCE. Se uso estructura SEO básica para la semántica en buscadores
+                  </p>
+                  <div class="eins-modal-text-2">
+                      <span>ENLACE:</span><a href="/">https://www.caracolajoyitas.com</a>
+                  </div>
+                  <div class="eins-modal-text-3">
+                      <span>Tecnologías Usadas:</span>
+                      <div class="eins-modal-tec">
+                          <img src="img/html-icon-removebg-preview.png" alt="">
+                          <img src="img/css-icon-removebg-preview.png" alt="">
+                          <img src="img/wordpress-icon-removebg-preview.png" alt="">
+                          <img src="img/woo-icon-removebg-preview.png" alt="">
+                          <img src="img/seo-removebg-preview.png" alt="">
+                          <div>
+                              <a href="https://www.caracolajoyitas.com" target="blank">
+                            
+                         </div>
+                      </div>
+
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+
+
+<div id="pw-gretaypio" class="eins-modal" data-options="openTransition: expandIn; openDuration: 200;">
+  <div class="eins-modal-content">
+      <div class="eins-modal-close"></div>
+          <div class="pw-content">
+              <div class="eins-modal-preview">
+                  <img src="img/gretaypio.png" alt="">
+              </div>
+              <div class="eins-modal-text">
+                  <p> Tienda online de moda con diseños de perros, Construida con HTML, CSS, WORDPRESS y WOOCOMERCE. Se uso estructura SEO básica para la semántica en buscadores
+                  </p>
+                  <div class="eins-modal-text-2">
+                      <span>ENLACE:</span><a href="https://www.gretaypio.com"target="_blank">https://www.gretaypio.com</a>
+                  </div>
+                  <div class="eins-modal-text-3">
+                      <span>Tecnologías Usadas:</span>
+                      <div class="eins-modal-tec">
+                          <img src="img/wordpress-icon-removebg-preview.png" alt="">
+                          <img src="img/html-icon-removebg-preview.png" alt="">
+                          <img src="img/woo-icon-removebg-preview.png" alt="">
+                          <img src="img/css-icon-removebg-preview.png" alt="">
+                          <img src="img/seo-removebg-preview.png" alt="">
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+
+<div id="pw-kodu" class="eins-modal" data-options="openTransition: expandIn; openDuration: 200;">
+  <div class="eins-modal-content">
+      <div class="eins-modal-close"></div>
+          <div class="pw-content">
+              <div class="eins-modal-preview">
+                  <img src="img/koduu.png" alt="">
+              </div>
+              <div class="eins-modal-text">
+                  <p> Dacorp Group- Centro autorizado Panasonic.<br> Creación de página coorporativa.<br>Es una empresa que ofrece servicios de instalación, mantenimiento y venta de repuestos Panasonic.  </p>
+                  <p> Optimización con SEO e implementación de SEM para posicionamiento</p>
+                  <div class="eins-modal-text-2">
+                      <span>ENLACE:</span><a href="https://dacorp.net"target="_blank">https://dacorp.net</a>
+                  </div>
+                  <div class="eins-modal-text-3">
+                      <span>Tecnologías Usadas:</span>
+                      <div class="eins-modal-tec">
+                          <img src="img/html-icon-removebg-preview.png" alt="">
+                          <img src="img/css-icon-removebg-preview.png" alt="">
+                          <img src="img/js-icon-removebg-preview.png" alt="">
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+
+<div id="pw-rickymorty" class="eins-modal" data-options="openTransition: expandIn; openDuration: 200;">
+  <div class="eins-modal-content">
+      <div class="pw-content">
+          <div class="eins-modal-close"></div>    
+          <div class="eins-modal-preview"><img src="img/Rickymorty.png" alt="">
+          </div>
+          <div class="eins-modal-text">
+              <p> Página corporativa de Ionic Pro- Página de lanzamiento de producto Ionic Uv Purifier.  </p>
+              <p> Un purificador por UV (luz ultravioleta) que se coloca en los aires acondicionados y elimina virus y bacterias presentes en el ambiente</p>
+              <div class="eins-modal-text-2">
+                  <span>Enlace:</span> <a href="https://ionicpro.net"target="_blank">https://ionicpro.net</a>
+              </div>
+              <div class="eins-modal-text-3">
+                  <span>Tecnologías Utilizadas:</span> 
+                  <div class="eins-modal-tec">
+                      <img src="img/html-icon.png" alt="">
+                      <img src="img/css-icon.png" alt="">
+                      <img src="img/js-icon-removebg-preview.png" alt="">
+                      <img src="img/css-icon.png" alt="">
+                    
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+<div id="pw-portafolio" class="eins-modal" data-options="openTransition: expandIn; openDuration: 200;">
+  <div class="eins-modal-content">
+      <div class="pw-content">
+          <div class="eins-modal-close"></div>    
+          <div class="eins-modal-preview"><img src="img/web-portafolio.png" alt="">
+          </div>
+          <div class="eins-modal-text">
+              <p>Repar Ind. Sa, Página coorporativa para empresa panameña enfocada en reparaciónes y sistemas industriales.  </p>
+              <p> Tienen dos ramas importantes. Instalación de Energía Solar e Instalación, mantenimiento y reparación de  Tecles y montacargas.</p>
+              <div class="eins-modal-text-2">
+                  <span>Enlace:</span> <a href="https://reparind.com"target="_blank">https://reparind.com</a>
+              </div>
+              <div class="eins-modal-text-3">
+                  <span>Tecnologías Utilizadas:</span> 
+                  <div class="eins-modal-tec">
+                      <img src="img/html-icon-removebg-preview.png" alt="">
+                      <img src="img/css-icon-removebg-preview.png" alt="">
+      
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+
+
+
+</div>
   </body>
 </html>
